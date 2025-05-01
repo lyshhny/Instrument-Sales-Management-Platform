@@ -1,0 +1,33 @@
+<%- include("../templates/header") %>
+
+<main>
+    <h1>Checkout</h1>
+
+    <h2>Your Order</h2>
+    <% cartItems.forEach(item => { %>
+        <div>
+            <h3><%= item.name %> (x<%= item.quantity %>)</h3>
+            <p>Subtotal: $<%= item.subtotal.toFixed(2) %></p>
+        </div>
+    <% }); %>
+
+    <hr>
+    <h3>Total: $<%= cartItems.reduce((total, item) => total + item.subtotal, 0).toFixed(2) %></h3>
+
+    <h2>Customer Information</h2>
+    <form action="/checkout" method="POST">
+        <div>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required />
+        </div>
+
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required />
+        </div>
+
+        <button type="submit" class="btn">Place Order</button>
+    </form>
+</main>
+
+<%- include("../templates/footer") %>

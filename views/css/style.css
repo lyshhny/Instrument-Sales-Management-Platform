@@ -1,0 +1,207 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f9; 
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Styles */
+header {
+    background-image: url('/img/banner.jpg');
+    background-size: cover; 
+    background-color: #007bff;
+    background-position: center;
+    color: white;
+    padding: 20px 10px;
+    text-align: center;
+    position: sticky;
+    top: 0; /* Header sticks to the top when scrolling */
+    z-index: 1000; /* Ensure it stays above other content */
+}
+
+header h1 {
+    font-size: 2.2em;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    font-size: 1em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+header nav a:hover {
+    text-decoration: underline;
+    color: #fffb00;     
+}
+
+/* Main Content Area */
+main {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 15px;
+    background: white;
+    border: 1px solid #ddd; /* Subtle border */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Instrument List */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background-color: #f9f9f9;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+ul li img {
+    width: 100px;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+ul li h2 {
+    margin: 0;
+    color: #007bff; /* Match header color */
+}
+
+ul li p {
+    margin: 5px 0;
+    color: #555;
+}
+
+/* Button Style */
+.btn {
+    background-color: #007bff; 
+    font-weight: bold;
+    color: white;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #0056b3; /* Darker shade of blue on hover */
+}
+
+
+/* Edit Button */
+.btn-edit {
+    background-color: blue;
+    color: white;
+    padding: 5px;
+    text-decoration: none;
+}
+
+/* Forms */
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+form input,
+form textarea,
+form button {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+form input:focus,
+form textarea:focus,
+form button:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+form textarea {
+    resize: none;
+    height: 100px;
+}
+
+form button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 12px;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
+
+/* Footer */
+footer {
+    background-color: #f8f9fa;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+    border-top: 1px solid #ddd;
+}
+
+.footer-container p {
+    margin: 5px 0;
+    font-size: 0.9em;
+    color: #555;
+}
+
+footer nav a {
+    text-decoration: none;
+    margin: 0 10px;
+    color: #007bff;
+}
+
+footer nav a:hover {
+    text-decoration: underline;
+    color: #0056b3;
+}
+
+/* Utility: Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.8em;
+    }
+
+    ul li {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    ul li img {
+        width: 80px;
+    }
+}

@@ -1,0 +1,45 @@
+<%- include("../templates/header") %>
+
+<main>
+    <h1>Edit Instrument's Post</h1>
+
+    <form action="/instruments/<%= instrument._id %>?_method=PUT" method="POST">
+        <div>
+            <label for="name">Instrument Name:</label>
+            <input type="text" id="name" name="name" value="<%= instrument.name %>" required />
+        </div>
+
+        <div>
+            <label for="type">Type:</label>
+            <input type="text" id="type" name="type" value="<%= instrument.type %>" required />
+        </div>
+
+        <div>
+            <label for="brand">Brand:</label>
+            <input type="text" id="brand" name="brand" value="<%= instrument.brand %>" required />
+        </div>
+
+        <div>
+            <label for="price">Price:</label>
+            <input type="number" id="price" name="price" value="<%= instrument.price %>" required />
+        </div>
+
+        <div>
+            <label for="stock">Stock:</label>
+            <input type="number" id="stock" name="stock" value="<%= instrument.stock %>" required />
+        </div>
+
+        <div>
+            <label for="description">Description:</label>
+            <textarea id="description" name="description"><%= instrument.description %></textarea>
+        </div>
+
+        <button type="submit">Update Instrument</button>
+
+    </form>
+    <form action="/instruments/<%= instrument._id %>?_method=DELETE" method="POST">
+        <button type="submit" style="background-color: red; color: white;">Delete</button>
+    </form>
+</main>
+
+<%- include("../templates/footer") %>

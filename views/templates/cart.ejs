@@ -1,0 +1,33 @@
+<%- include("../templates/header") %>
+
+<main>
+    <h1>Shopping Cart</h1>
+
+    <% if (cartItems.length > 0) { %>
+        <ul>
+            <% cartItems.forEach(item => { %>
+                <li>
+                    <img src="/img/<%= item.image %>" alt="<%= item.name %>" style="width: 100px;" />
+                    <h2><%= item.name %></h2>
+                    <p>Price: $<%= item.price %></p>
+                    <p>Quantity: <%= item.quantity %></p>
+                    <p>Subtotal: $<%= (item.price * item.quantity).toFixed(2) %></p>
+
+                    <!-- Remove Item Button -->
+                    <form action="/cart/remove" method="POST">
+                        <input type="hidden" name="instrumentId" value="<%= item._id %>" />
+                        <button type="submit" class="btn">Remove Item</button>
+                    </form>
+                </li>
+            <% }); %>
+        </ul>
+
+        <hr>
+        <h3>Total: $<%= cartItems.reduce((total, item) => total + (item.price * item.quantity), 0).toFixed(2) %></h3>
+        <a href="/checkout" class="btn">Proceed to Checkout</a>
+    <% } else { %>
+        <p>Your cart is empty. <br><a href="/instruments">Go back to browse instruments</a>.</p>
+    <% } %>
+</main>
+
+<%- include("../templates/footer") %>

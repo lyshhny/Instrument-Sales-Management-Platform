@@ -1,0 +1,41 @@
+<%- include("../templates/header") %> <!-- Include the header -->
+
+<main>
+    <h1>Add a New Instrument</h1>
+
+    <form action="/instruments/add" method="POST">
+        <div>
+            <label for="name">Instrument Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter instrument name" required minlength="3" />
+        </div>
+
+        <div>
+            <label for="type">Type:</label>
+            <input type="text" id="type" name="type" placeholder="Enter type of instrument" required />
+        </div>
+
+        <div>
+            <label for="brand">Brand:</label>
+            <input type="text" id="brand" name="brand" placeholder="Enter brand name" required />
+        </div>
+
+        <div>
+            <label for="price">Price:</label>
+            <input type="number" id="price" name="price" placeholder="Enter price in CAD" min="1" step="0.01" required />
+        </div>
+
+        <div>
+            <label for="stock">Stock:</label>
+            <input type="number" id="stock" name="stock" placeholder="Enter available stock" min="0" required />
+        </div>
+
+        <div>
+            <label for="description">Description:</label>
+            <textarea id="description" name="description" placeholder="Enter a brief description"></textarea>
+        </div>
+
+        <button type="submit">Add Instrument</button>
+    </form>
+</main>
+
+<%- include("../templates/footer") %> <!-- Include the footer -->

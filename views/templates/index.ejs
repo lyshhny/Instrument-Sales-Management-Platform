@@ -1,0 +1,33 @@
+<%- include("../templates/header") %> <!-- Include the header -->
+
+<main>
+    <h1>List of Available Music Instruments</h1>
+    <ul>
+        <% instruments.forEach((instrument) => { %>
+            <li>
+                <img src="/img/<%= instrument.image %>" alt="<%= instrument.name %>" width="120" />
+                <div>
+                    <h2><%= instrument.name %></h2>
+                    <p><strong>Type:</strong> <%= instrument.type %></p>
+                    <p><strong>Brand:</strong> <%= instrument.brand %></p>
+                    <p><strong>Price:</strong> $<%= instrument.price %></p>
+                    <p><strong>Stock:</strong> <%= instrument.stock %></p>
+                    <p><strong>Description:</strong> <%= instrument.description %></p>
+                    <a href="/instruments/<%= instrument._id %>/edit" class="btn btn-edit">Edit</a>
+                    
+                    <form action="/cart/add" method="POST">
+                        <input type="hidden" name="instrumentId" value="<%= instrument._id %>" />
+                        <button type="submit" class="btn">Add to Cart</button>
+                    </form>
+    
+                </div>
+            </li>
+        <% }); %>
+    </ul>
+
+    <% if (instruments.length === 0) { %>
+        <p>No instruments are available at the moment. Add some to get started!</p>
+    <% } %>
+</main>
+
+<%- include("../templates/footer") %> <!-- Include the footer -->
