@@ -1,16 +1,33 @@
-# Project Name: Music Instruments Ecommerce
-## Description:
-A web application for browsing, managing, and purchasing musical instruments. This project allows users to explore a variety of instruments, add items to their cart, and complete a simulated checkout process. It also provides features for authorized users to manage inventory, including adding, editing, and deleting instruments.
-# Features:
-- Browse a catalog of instruments with detailed descriptions and prices.
-- Add items to the cart and simulate a checkout process.
-- Stock management system that updates inventory on purchase.
-- User-friendly forms for inventory management (available to logged-in users).
-# Technologies Used
-- Node.js: JavaScript runtime for backend development.
-- Express.js: Framework for building server-side functionality.
-- MongoDB: Database for storing instruments and user data.
-- EJS: Templating engine for dynamic HTML rendering.
-- bcrypt: Library for securely hashing passwords during user authentication.
-- express-session: Middleware for handling session-based functionality (like the shopping cart).
-- CSS: Styling for a responsive and user-friendly design.
+Instrument Sales & Management Platform
+Description
+
+A full-stack web application designed for browsing, purchasing, and managing musical instruments. This project allows regular users to explore a catalog of instruments, add them to a cart, and simulate a checkout process. It also provides admin-level access for inventory management, including adding, editing, and deleting products.
+Features
+
+    Browse a variety of musical instruments with images and detailed information
+
+    Add items to a shopping cart and simulate a checkout
+
+    User registration and login system with session handling
+
+    Admin panel for managing instruments and inventory
+
+    Inventory stock updates after each purchase
+
+    Responsive interface for desktop and mobile users
+
+Technology Stack
+
+    Node.js – JavaScript runtime used for server-side logic
+
+    Express.js – Web framework for building routes and handling server requests
+
+    MongoDB – NoSQL database for storing instrument data and user accounts
+
+    EJS – Templating engine used for rendering dynamic content
+
+    bcrypt – Password hashing for secure authentication
+
+    express-session – Session management to maintain login state and cart data
+
+    CSS – Used for basic styling and responsive layout
